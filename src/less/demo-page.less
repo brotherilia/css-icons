@@ -1,0 +1,24 @@
+.icon-list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+
+  &__item {
+    position: relative;
+    margin: 10px;
+    padding: 10px;
+    outline: 1px solid #cccccc;
+  }
+
+  &__description {
+    position: absolute;
+    bottom: -15px;
+    .center-hor-abs();
+    display: block;
+    font-size: 10px;
+    color: #555555;
+  }
+}
+
