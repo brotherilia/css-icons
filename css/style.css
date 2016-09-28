@@ -694,6 +694,36 @@ body {
 
   background-color: #000000;
 }
+.css-icon--down {
+  width: 48px;
+  height: 48px;
+
+  border-radius: 100%;
+  box-shadow: inset 0 0 0 4.8px #000000;
+}
+.css-icon--down::before {
+  top: 28.8px;
+  right: 0;
+  left: 0;
+
+  width: 24px;
+  height: 24px;
+  margin: 0 auto;
+
+  border: 12px solid transparent;
+  border-top: 12px solid #000000;
+}
+.css-icon--down::after {
+  right: 0;
+  bottom: 19.2px;
+  left: 0;
+
+  width: 8.64px;
+  height: 21.6px;
+  margin: 0 auto;
+
+  background-color: #000000;
+}
 .css-icon--prev {
   width: 48px;
   height: 48px;
