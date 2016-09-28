@@ -1,0 +1,53 @@
+.icon-list {
+  max-width: 1000px;
+  padding: 0;
+  margin: 0 auto;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  &__item {
+    margin: 10px;
+    box-shadow: 2px 2px 5px 0 #999999;
+  }
+
+  &__figure {
+    margin: 0;
+    padding-top: 10px;
+    .icon-size(@icon-size * 2, auto);
+  }
+
+  &__link {
+    .icon-size();
+    display: block;
+    position: relative;
+    border: none;
+    outline: none;
+    background: none;
+    box-shadow: none;
+    padding: 0;
+    margin: 0 auto;
+
+    @media @mobile-widths {
+      cursor: default;
+    }
+
+    &:active {
+      transition-property: opacity, transform;
+      transition-duration: 0.5s;
+      /* transform: rotate(360deg); */
+      opacity: 0.5;
+    }
+  }
+
+  &__description {
+    text-align: center;
+    display: block;
+    font-size: 10px;
+    color: #555555;
+    background-color: #cccccc;
+    margin-top: 10px;
+  }
+}
+
