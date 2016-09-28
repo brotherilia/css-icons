@@ -449,20 +449,7 @@ th {
 
   outline: 1px solid #cccccc;
 }
-.icon-list__description {
-  position: absolute;
-  bottom: -15px;
-  left: 50%;
-
-  display: block;
-
-  font-size: 10px;
-  color: #555555;
-
-  -webkit-transform: translate(-50%, 0);
-          transform: translate(-50%, 0);
-}
-.icon-link {
+.icon-list__link {
   position: relative;
 
   display: block;
@@ -475,7 +462,7 @@ th {
   outline: none;
   box-shadow: none;
 }
-.icon-link:active {
+.icon-list__link:active {
   /* transform: rotate(360deg); */
   opacity: 0.5;
 
@@ -485,6 +472,19 @@ th {
           transition-property: opacity, -webkit-transform;
           transition-property: opacity, transform;
           transition-property: opacity, transform, -webkit-transform;
+}
+.icon-list__description {
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+
+  display: block;
+
+  font-size: 10px;
+  color: #555555;
+
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
 }
 .css-icon {
   position: absolute;
