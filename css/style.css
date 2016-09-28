@@ -426,7 +426,10 @@ th {
   padding: 0;
 }
 /***** CONCATENATION HERE! *****/
-.icon-list {
+body {
+  background-color: #ffffff;
+}
+.icon-list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -495,6 +498,22 @@ th {
   margin: auto;
 
   text-indent: 5000px;
+  /*
+
+  &-- {
+    .icon-size();
+    .offset();
+
+    &::before {
+      .icon-size(@icon-size, @icon-size);
+    }
+
+    &::after {
+      .icon-size(@icon-size, @icon-size);
+    }
+  }
+
+ */
 }
 .css-icon::before,
 .css-icon::after {
@@ -594,7 +613,7 @@ th {
 
   height: 6.4px;
 
-  border-radius: 32px;
+  border-radius: 3.2px;
 }
 .css-icon--info::after {
   top: 12.8px;
@@ -625,7 +644,7 @@ th {
 
   height: 6.4px;
 
-  border-radius: 32px;
+  border-radius: 3.2px;
 }
 .css-icon--alarm::after {
   top: 4.8px;
@@ -736,8 +755,8 @@ th {
   border-bottom-left-radius: 32px;
 }
 .css-icon--sun {
-  width: 22.4px;
-  height: 22.4px;
+  width: 20.8px;
+  height: 20.8px;
 
   background-color: #000000;
   border-radius: 100%;
@@ -776,4 +795,70 @@ th {
   background-color: #000000;
   border-top-right-radius: 16px;
   border-bottom-right-radius: 16px;
+}
+.css-icon--people {
+  top: 16px;
+  left: -5.76px;
+
+  width: 32px;
+  height: 32px;
+}
+.css-icon--people::before {
+  top: 10.56px;
+  right: 0;
+  left: 0;
+
+  width: 19.2px;
+  height: 11.2px;
+  margin: 0 auto;
+
+  background-color: #000000;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  box-shadow: 0 0 0 0.96px #ffffff, 9.6px -3.2px 0 0 #000000, -3.2px -8px 0 0 #000000;
+}
+.css-icon--people::after {
+  top: 0;
+  right: 0;
+  left: 0;
+
+  width: 9.6px;
+  height: 11.2px;
+  margin: 0 auto;
+
+  background-color: #000000;
+  border-top-left-radius: 4.8px;
+  border-top-right-radius: 4.8px;
+  border-bottom-right-radius: 4.8px;
+  border-bottom-left-radius: 4.8px;
+  box-shadow: 0 0 0 0.96px #ffffff, 9.6px -3.2px 0 0 #000000, -3.2px -8px 0 0 #000000;
+}
+.css-icon--orthodoxy {
+  width: 5.12px;
+  height: 32px;
+
+  background-color: #000000;
+}
+.css-icon--orthodoxy::before {
+  top: 6.4px;
+  left: 0;
+  left: 50%;
+
+  width: 19.2px;
+  height: 4.48px;
+
+  background-color: #000000;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+}
+.css-icon--orthodoxy::after {
+  top: 20.8px;
+  left: -4.64px;
+
+  width: 14.4px;
+  height: 3.84px;
+
+  background-color: #000000;
+  -webkit-transform: rotate(30deg);
+          transform: rotate(30deg);
 }
