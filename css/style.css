@@ -426,35 +426,51 @@ th {
   padding: 0;
 }
 /***** CONCATENATION HERE! *****/
-body {
+html,
+body {
+  box-sizing: border-box;
+
   background-color: #ffffff;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
 }
 .icon-list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
       flex-wrap: wrap;
-  margin: 0;
+  justify-content: center;
+  max-width: 1000px;
+  margin: 0 auto;
   padding: 0;
 
   list-style: none;
 
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   -ms-flex-wrap: wrap;
 }
 .icon-list__item {
-  position: relative;
-
   margin: 10px;
-  padding: 10px;
 
-  outline: 1px solid #cccccc;
+  box-shadow: 2px 2px 5px 0 #999999;
+}
+.icon-list__figure {
+  width: 96px;
+  height: auto;
+  margin: 0;
+  padding-top: 10px;
 }
 .icon-list__link {
   position: relative;
 
   display: block;
-  width: 32px;
-  height: 32px;
+  width: 48px;
+  height: 48px;
+  margin: 0 auto;
   padding: 0;
 
   background: none;
@@ -474,17 +490,14 @@ th {
           transition-property: opacity, transform, -webkit-transform;
 }
 .icon-list__description {
-  position: absolute;
-  bottom: -15px;
-  left: 50%;
-
   display: block;
+  margin-top: 10px;
 
   font-size: 10px;
+  text-align: center;
   color: #555555;
 
-  -webkit-transform: translate(-50%, 0);
-          transform: translate(-50%, 0);
+  background-color: #cccccc;
 }
 .css-icon {
   position: absolute;
@@ -496,8 +509,6 @@ th {
   display: block;
   box-sizing: border-box;
   margin: auto;
-
-  text-indent: 5000px;
   /*
 
   &-- {
@@ -524,32 +535,32 @@ th {
   box-sizing: border-box;
 }
 .css-icon--menu {
-  width: 32px;
-  height: 28.8px;
+  width: 48px;
+  height: 43.2px;
 
   background-image: -webkit-linear-gradient(bottom, #000000, #000000 20%, transparent 20%, transparent 39%, #000000 39%, #000000 61%, transparent 61%, transparent 80%, #000000 80%, #000000 100%);
   background-image:         linear-gradient(to top, #000000, #000000 20%, transparent 20%, transparent 39%, #000000 39%, #000000 61%, transparent 61%, transparent 80%, #000000 80%, #000000 100%);
   border-radius: 20%;
 }
 .css-icon--close {
-  width: 32px;
-  height: 32px;
+  width: 48px;
+  height: 48px;
 
   border-radius: 100%;
-  box-shadow: inset 0 0 0 3.2px #000000;
+  box-shadow: inset 0 0 0 4.8px #000000;
 }
 .css-icon--close::before,
 .css-icon--close::after {
-  top: 4.8px;
+  top: 7.2px;
   right: 0;
   left: 0;
 
-  width: 4.8px;
-  height: 22.4px;
+  width: 7.2px;
+  height: 33.6px;
   margin: 0 auto;
 
   background-color: #000000;
-  border-radius: 5.12px;
+  border-radius: 7.68px;
 }
 .css-icon--close::before {
   -webkit-transform: rotate(45deg);
@@ -560,305 +571,309 @@ th {
           transform: rotate(-45deg);
 }
 .css-icon--home {
-  top: -30.4px;
+  top: -45.6px;
   left: 0;
 
-  width: 32px;
-  height: 32px;
+  width: 48px;
+  height: 48px;
 
-  border: 16px solid transparent;
-  border-bottom: 16px solid #000000;
+  border: 24px solid transparent;
+  border-bottom: 24px solid #000000;
 }
 .css-icon--home::before {
-  top: 16px;
+  top: 24px;
   left: 50%;
 
-  width: 25.6px;
-  height: 14.4px;
+  width: 38.4px;
+  height: 21.6px;
 
-  border: 11.2px solid #000000;
-  border-top: 5.76px solid #000000;
+  border: 16.8px solid #000000;
+  border-top: 8.64px solid #000000;
   border-bottom: none;
   -webkit-transform: translate(-50%, 0);
           transform: translate(-50%, 0);
 }
 .css-icon--home::after {
-  top: 1.6px;
-  left: 4.8px;
+  top: 2.4px;
+  left: 7.2px;
 
-  width: 3.84px;
-  height: 9.6px;
+  width: 5.76px;
+  height: 14.4px;
 
   background-color: #000000;
 }
 .css-icon--info {
-  width: 32px;
-  height: 32px;
+  width: 48px;
+  height: 48px;
 
   border-radius: 100%;
-  box-shadow: inset 0 0 0 3.2px #000000;
+  box-shadow: inset 0 0 0 4.8px #000000;
 }
 .css-icon--info::before,
 .css-icon--info::after {
   right: 0;
   left: 0;
 
-  width: 6.4px;
+  width: 9.6px;
   margin: 0 auto;
 
   background-color: #000000;
 }
 .css-icon--info::before {
-  top: 4.8px;
+  top: 7.2px;
 
-  height: 6.4px;
+  height: 9.6px;
 
-  border-radius: 3.2px;
+  border-radius: 4.8px;
 }
 .css-icon--info::after {
-  top: 12.8px;
+  top: 19.2px;
 
-  height: 14.4px;
+  height: 21.6px;
 
-  border-radius: 5.12px;
+  border-radius: 7.68px;
 }
 .css-icon--alarm {
-  width: 32px;
-  height: 32px;
+  width: 48px;
+  height: 48px;
 
   border-radius: 100%;
-  box-shadow: inset 0 0 0 3.2px #000000;
+  box-shadow: inset 0 0 0 4.8px #000000;
 }
 .css-icon--alarm::before,
 .css-icon--alarm::after {
   right: 0;
   left: 0;
 
-  width: 6.4px;
+  width: 9.6px;
   margin: 0 auto;
 
   background-color: #000000;
 }
 .css-icon--alarm::before {
-  top: 20.8px;
+  top: 31.2px;
 
-  height: 6.4px;
+  height: 9.6px;
 
-  border-radius: 3.2px;
+  border-radius: 4.8px;
 }
 .css-icon--alarm::after {
-  top: 4.8px;
+  top: 7.2px;
 
-  height: 14.4px;
+  height: 21.6px;
 
-  border-radius: 5.12px;
+  border-radius: 7.68px;
 }
 .css-icon--up {
-  width: 32px;
-  height: 32px;
+  width: 48px;
+  height: 48px;
 
   border-radius: 100%;
-  box-shadow: inset 0 0 0 3.2px #000000;
+  box-shadow: inset 0 0 0 4.8px #000000;
 }
 .css-icon--up::before {
   right: 0;
-  bottom: 19.2px;
+  bottom: 28.8px;
   left: 0;
 
-  width: 16px;
-  height: 16px;
+  width: 24px;
+  height: 24px;
   margin: 0 auto;
 
-  border: 8px solid transparent;
-  border-bottom: 8px solid #000000;
+  border: 12px solid transparent;
+  border-bottom: 12px solid #000000;
 }
 .css-icon--up::after {
-  top: 12.8px;
+  top: 19.2px;
   right: 0;
   left: 0;
 
-  width: 5.76px;
-  height: 14.4px;
+  width: 8.64px;
+  height: 21.6px;
   margin: 0 auto;
 
   background-color: #000000;
 }
 .css-icon--prev {
-  width: 32px;
-  height: 32px;
+  width: 48px;
+  height: 48px;
 
   border-radius: 100%;
-  box-shadow: inset 0 0 0 3.2px #000000;
+  box-shadow: inset 0 0 0 4.8px #000000;
 }
 .css-icon--prev::before {
   top: 0;
-  right: 14.4px;
+  right: 21.6px;
   bottom: 0;
 
-  width: 16px;
-  height: 16px;
+  width: 24px;
+  height: 24px;
   margin: auto 0;
 
-  border: 8px solid transparent;
-  border-right: 8px solid #000000;
+  border: 12px solid transparent;
+  border-right: 12px solid #000000;
 }
 .css-icon--next {
-  width: 32px;
-  height: 32px;
+  width: 48px;
+  height: 48px;
 
   border-radius: 100%;
-  box-shadow: inset 0 0 0 3.2px #000000;
+  box-shadow: inset 0 0 0 4.8px #000000;
 }
 .css-icon--next::before {
   top: 0;
   bottom: 0;
-  left: 14.4px;
+  left: 21.6px;
 
-  width: 16px;
-  height: 16px;
+  width: 24px;
+  height: 24px;
   margin: auto 0;
 
-  border: 8px solid transparent;
-  border-left: 8px solid #000000;
+  border: 12px solid transparent;
+  border-left: 12px solid #000000;
 }
 .css-icon--briefcase {
-  width: 32px;
-  height: 25.6px;
+  width: 48px;
+  height: 38.4px;
 
   background-color: #000000;
-  border-radius: 3.2px;
+  border-radius: 4.8px;
 }
 .css-icon--briefcase::before {
-  top: 6.4px;
+  top: 9.6px;
   right: 0;
   left: 0;
 
-  width: 32px;
-  height: 9.6px;
+  width: 48px;
+  height: 14.4px;
   margin: 0 auto;
 
   border-bottom: 1px solid #ffffff;
-  border-bottom-right-radius: 32px;
-  border-bottom-left-radius: 32px;
+  border-bottom-right-radius: 48px;
+  border-bottom-left-radius: 48px;
 }
 .css-icon--briefcase::after {
-  top: 15.68px;
+  top: 23.52px;
   right: 0;
   left: 0;
 
-  width: 6.4px;
-  height: 3.2px;
+  width: 9.6px;
+  height: 4.8px;
   margin: 0 auto;
 
   background-color: #ffffff;
-  border-bottom-right-radius: 32px;
-  border-bottom-left-radius: 32px;
+  border-bottom-right-radius: 48px;
+  border-bottom-left-radius: 48px;
 }
 .css-icon--sun {
-  width: 20.8px;
-  height: 20.8px;
+  width: 31.2px;
+  height: 31.2px;
 
   background-color: #000000;
   border-radius: 100%;
-  box-shadow: 0 13.44px 0 -8.96px #000000, 0 -13.44px 0 -8.96px #000000, 13.44px 0 0 -8.96px #000000, -13.44px 0 0 -8.96px #000000, 9.6px 9.6px 0 -8.96px #000000, -9.6px 9.6px 0 -8.96px #000000, 9.6px -9.6px 0 -8.96px #000000, -9.6px -9.6px 0 -8.96px #000000;
+  box-shadow: 0 20.16px 0 -13.44px #000000, 0 -20.16px 0 -13.44px #000000, 20.16px 0 0 -13.44px #000000, -20.16px 0 0 -13.44px #000000, 14.4px 14.4px 0 -13.44px #000000, -14.4px 14.4px 0 -13.44px #000000, 14.4px -14.4px 0 -13.44px #000000, -14.4px -14.4px 0 -13.44px #000000;
 }
 .css-icon--moon {
-  top: -14.4px;
-  left: -14.4px;
+  top: -21.6px;
+  left: -21.6px;
 
-  width: 28.8px;
-  height: 28.8px;
+  width: 43.2px;
+  height: 43.2px;
 
   border-radius: 100%;
-  box-shadow: 6.4px 6.4px 0 1.6px #000000;
+  box-shadow: 9.6px 9.6px 0 2.4px #000000;
 }
 .css-icon--heart {
-  top: -14.4px;
-  left: -18.24px;
+  top: -21.6px;
+  left: -27.36px;
 
-  width: 16px;
-  height: 9.6px;
+  width: 24px;
+  height: 15.84px;
 
   background-color: #000000;
-  border-top-left-radius: 16px;
-  border-top-right-radius: 16px;
-  box-shadow: 0 3.2px 0 0 #000000;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
 }
 .css-icon--heart::before {
-  top: 9.6px;
+  top: 14.4px;
 
-  width: 25.76px;
-  height: 16px;
+  width: 38.4px;
+  height: 24px;
 
   background-color: #000000;
-  border-top-right-radius: 16px;
-  border-bottom-right-radius: 16px;
+  border-top-right-radius: 12px;
+  border-bottom-right-radius: 12px;
 }
 .css-icon--people {
-  top: 16px;
-  left: -5.76px;
+  top: 24px;
+  left: -8.64px;
 
-  width: 32px;
-  height: 32px;
+  width: 48px;
+  height: 48px;
 }
 .css-icon--people::before {
-  top: 10.56px;
+  top: 15.84px;
   right: 0;
   left: 0;
 
-  width: 19.2px;
-  height: 11.2px;
+  width: 28.8px;
+  height: 16.8px;
   margin: 0 auto;
 
   background-color: #000000;
-  border-top-left-radius: 8px;
-  border-top-right-radius: 8px;
-  box-shadow: 0 0 0 0.96px #ffffff, 9.6px -3.2px 0 0 #000000, -3.2px -8px 0 0 #000000;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  box-shadow: 0 0 0 1.44px #ffffff, 14.4px -4.8px 0 0 #000000, -4.8px -12px 0 0 #000000;
 }
 .css-icon--people::after {
   top: 0;
   right: 0;
   left: 0;
 
-  width: 9.6px;
-  height: 11.2px;
+  width: 14.4px;
+  height: 16.8px;
   margin: 0 auto;
 
   background-color: #000000;
-  border-top-left-radius: 4.8px;
-  border-top-right-radius: 4.8px;
-  border-bottom-right-radius: 4.8px;
-  border-bottom-left-radius: 4.8px;
-  box-shadow: 0 0 0 0.96px #ffffff, 9.6px -3.2px 0 0 #000000, -3.2px -8px 0 0 #000000;
+  border-top-left-radius: 7.2px;
+  border-top-right-radius: 7.2px;
+  border-bottom-right-radius: 7.2px;
+  border-bottom-left-radius: 7.2px;
+  box-shadow: 0 0 0 1.44px #ffffff, 14.4px -4.8px 0 0 #000000, -4.8px -12px 0 0 #000000;
 }
 .css-icon--orthodoxy {
-  width: 5.12px;
-  height: 32px;
+  width: 7.68px;
+  height: 48px;
 
   background-color: #000000;
 }
 .css-icon--orthodoxy::before {
-  top: 6.4px;
+  top: 9.6px;
   left: 0;
   left: 50%;
 
-  width: 19.2px;
-  height: 4.48px;
+  width: 28.8px;
+  height: 6.72px;
 
   background-color: #000000;
   -webkit-transform: translate(-50%, 0);
           transform: translate(-50%, 0);
 }
 .css-icon--orthodoxy::after {
-  top: 20.8px;
-  left: -4.64px;
+  top: 31.2px;
+  left: -6.96px;
 
-  width: 14.4px;
-  height: 3.84px;
+  width: 21.6px;
+  height: 5.76px;
 
   background-color: #000000;
   -webkit-transform: rotate(30deg);
           transform: rotate(30deg);
+}
+@media (max-width: 500px) {
+  .icon-list__link {
+    cursor: default;
+  }
 }
