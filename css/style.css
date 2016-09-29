@@ -426,80 +426,7 @@ th {
   padding: 0;
 }
 /***** CONCATENATION HERE! *****/
-html,
-body {
-  box-sizing: border-box;
-
-  background-color: #ffffff;
-}
-*,
-*::before,
-*::after {
-  box-sizing: inherit;
-}
-.icon-list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-      flex-wrap: wrap;
-  justify-content: center;
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 0;
-
-  list-style: none;
-
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -ms-flex-wrap: wrap;
-}
-.icon-list__item {
-  margin: 10px;
-
-  box-shadow: 2px 2px 5px 0 #999999;
-}
-.icon-list__figure {
-  width: 96px;
-  height: auto;
-  margin: 0;
-  padding-top: 10px;
-}
-.icon-list__link {
-  position: relative;
-
-  display: block;
-  width: 48px;
-  height: 48px;
-  margin: 0 auto;
-  padding: 0;
-
-  background: none;
-  border: none;
-  outline: none;
-  box-shadow: none;
-}
-.icon-list__link:active {
-  /* transform: rotate(360deg); */
-  opacity: 0.5;
-
-  -webkit-transition-duration: 0.5s;
-          transition-duration: 0.5s;
-  -webkit-transition-property: opacity, -webkit-transform;
-          transition-property: opacity, -webkit-transform;
-          transition-property: opacity, transform;
-          transition-property: opacity, transform, -webkit-transform;
-}
-.icon-list__description {
-  display: block;
-  margin-top: 10px;
-
-  font-size: 10px;
-  text-align: center;
-  color: #555555;
-
-  background-color: #cccccc;
-}
-.css-icon {
+.css-icon {
   position: absolute;
   top: 0;
   right: 0;
@@ -901,6 +828,79 @@ body {
   background-color: #000000;
   -webkit-transform: rotate(30deg);
           transform: rotate(30deg);
+}
+html,
+body {
+  box-sizing: border-box;
+
+  background-color: #ffffff;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+.icon-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+      flex-wrap: wrap;
+  justify-content: center;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0;
+
+  list-style: none;
+
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -ms-flex-wrap: wrap;
+}
+.icon-list__item {
+  margin: 10px;
+
+  box-shadow: 2px 2px 5px 0 #999999;
+}
+.icon-list__figure {
+  width: 96px;
+  height: auto;
+  margin: 0;
+  padding-top: 10px;
+}
+.icon-list__link {
+  position: relative;
+
+  display: block;
+  width: 48px;
+  height: 48px;
+  margin: 0 auto;
+  padding: 0;
+
+  background: none;
+  border: none;
+  outline: none;
+  box-shadow: none;
+}
+.icon-list__link:active {
+  /* transform: rotate(360deg); */
+  opacity: 0.5;
+
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+  -webkit-transition-property: opacity, -webkit-transform;
+          transition-property: opacity, -webkit-transform;
+          transition-property: opacity, transform;
+          transition-property: opacity, transform, -webkit-transform;
+}
+.icon-list__description {
+  display: block;
+  margin-top: 10px;
+
+  font-size: 10px;
+  text-align: center;
+  color: #555555;
+
+  background-color: #cccccc;
 }
 @media (max-width: 500px) {
   .icon-list__link {
