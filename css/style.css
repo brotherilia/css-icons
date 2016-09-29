@@ -832,13 +832,64 @@ th {
 html,
 body {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 
-  background-color: #ffffff;
+  background-color: #dddddd;
+
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 *,
 *::before,
 *::after {
   box-sizing: inherit;
+}
+.overall-wrapper {
+  max-width: 1000px;
+  min-height: 100vh;
+  margin: 0;
+  margin: 0 auto;
+  padding: 0;
+  padding-top: 20px;
+
+  background-color: #ffffff;
+  box-shadow: 0 0 20px 0 #777777;
+}
+h1 {
+  margin: 0;
+  margin-bottom: 20px;
+  padding: 0;
+
+  text-align: center;
+  color: #555555;
+  text-shadow: 2px 2px 5px #777777;
+}
+.vendor {
+  display: block;
+  margin-bottom: 30px;
+
+  text-align: center;
+  color: #555555;
+}
+.vendor__link {
+  color: #000000;
+  text-decoration: none;
+
+  border-bottom: 1px dotted #000000;
+}
+.vendor__link:hover {
+  border-bottom: none;
+}
+.vendor__link:active {
+  opacity: 0.5;
+
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+  -webkit-transition-property: opacity;
+          transition-property: opacity;
 }
 .icon-list {
   display: -webkit-box;
@@ -846,9 +897,9 @@ body {
   display: flex;
       flex-wrap: wrap;
   justify-content: center;
-  max-width: 1000px;
   margin: 0 auto;
   padding: 0;
+  padding-bottom: 20px;
 
   list-style: none;
 
@@ -881,16 +932,28 @@ body {
   outline: none;
   box-shadow: none;
 }
+.icon-list__link:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+  -webkit-transition-property: -webkit-transform;
+          transition-property: -webkit-transform;
+          transition-property:         transform;
+          transition-property:         transform, -webkit-transform;
+}
 .icon-list__link:active {
-  /* transform: rotate(360deg); */
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
   opacity: 0.5;
 
   -webkit-transition-duration: 0.5s;
           transition-duration: 0.5s;
   -webkit-transition-property: opacity, -webkit-transform;
           transition-property: opacity, -webkit-transform;
-          transition-property: opacity, transform;
-          transition-property: opacity, transform, -webkit-transform;
+          transition-property: transform, opacity;
+          transition-property: transform, opacity, -webkit-transform;
 }
 .icon-list__description {
   display: block;
@@ -903,6 +966,10 @@ body {
   background-color: #cccccc;
 }
 @media (max-width: 500px) {
+  .overall-wrapper {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
   .icon-list__link {
     cursor: default;
   }
