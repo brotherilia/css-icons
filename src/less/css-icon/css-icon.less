@@ -521,6 +521,29 @@
     }
   }
 
+  /////*** SETTINGS ***/////
+
+  &--settings {
+    .icon-size();
+    border-radius: 100%;
+    background-color: @icon-color;
+
+    &::before {
+      .circle-fill(@icon-size * 0.4);
+      .center-both();
+      background-color: @icon-bg-color;
+      box-shadow: 0 @icon-size * 0.5 0 -@icon-size * 0.08 @icon-bg-color,
+                  0 -@icon-size * 0.5 0 -@icon-size * 0.08 @icon-bg-color,
+                  @icon-size * 0.5 0 0 -@icon-size * 0.08 @icon-bg-color,
+                  -@icon-size * 0.5 0 0 -@icon-size * 0.08 @icon-bg-color,
+                  @icon-size * 0.35 @icon-size * 0.35 0 -@icon-size * 0.08 @icon-bg-color,
+                  -@icon-size * 0.35 @icon-size * 0.35 0 -@icon-size * 0.08 @icon-bg-color,
+                  @icon-size * 0.35 -@icon-size * 0.35 0 -@icon-size * 0.08 @icon-bg-color,
+                  -@icon-size * 0.35 -@icon-size * 0.35 0 -@icon-size * 0.08 @icon-bg-color;
+      //box-shadow: 10px 10px 0 -@icon-size * 0.1 @icon-bg-color;
+    }
+  }
+
   /////***  ***/////
 
 /*
