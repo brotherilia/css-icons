@@ -1,4 +1,4 @@
-@mobile-widths: e("(max-width: 500px)");
+@mobile-widths: e("(max-width: 900px)");
 
 html, body {
   margin: 0;
@@ -13,7 +13,8 @@ html, body {
 }
 
 .overall-wrapper {
-  max-width: 1000px;
+  max-width: 900px;
+  min-width: 320px;
   margin: 0;
   padding: 0;
   margin: 0 auto;
@@ -21,21 +22,17 @@ html, body {
   min-height: 100vh;
   background-color: @icon-bg-color;
   box-shadow: 0 0 20px 0 #777777;
-
-  @media @mobile-widths {
-    padding-left: 20px;
-    padding-right: 20px;
-  }
 }
 
 h1 {
-  margin: 0;
+  margin: 0 10px;
   padding: 0;
   text-align: center;
   margin-bottom: 20px;
   color: #555555;
   text-shadow: 2px 2px 5px #777777;
 }
+
 .vendor {
   display: block;
   text-align: center;
@@ -56,6 +53,21 @@ h1 {
       transition-duration: 0.5s;
       opacity: 0.5;
     }
+
+    @media @mobile-widths {
+      cursor: default;
+
+      &:hover {
+        border-bottom: 1px dotted #000000;
+      }
+
+      &:active {
+        border-bottom: none;
+        transition-property: opacity;
+        transition-duration: 0.5s;
+        opacity: 0.5;
+      }
+    }
   }
 }
 
@@ -71,6 +83,10 @@ h1 {
   &__item {
     margin: 10px;
     box-shadow: 2px 2px 5px 0 #999999;
+
+    @media @mobile-widths {
+      margin: 5px;
+    }
   }
 
   &__figure {
@@ -89,10 +105,7 @@ h1 {
     box-shadow: none;
     padding: 0;
     margin: 0 auto;
-
-    @media @mobile-widths {
-      cursor: default;
-    }
+    //outline: 1px solid red;
 
     &:hover {
       transition-property: transform;
@@ -105,6 +118,21 @@ h1 {
       transition-duration: 0.5s;
       transform: scale(0.8);
       opacity: 0.5;
+    }
+
+    @media @mobile-widths {
+      cursor: default;
+
+      &:hover {
+        transform: none;
+      }
+
+      &:active {
+        transition-property: transform, opacity;
+        transition-duration: 0.5s;
+        transform: scale(0.5);
+        opacity: 0.5;
+      }
     }
   }
 

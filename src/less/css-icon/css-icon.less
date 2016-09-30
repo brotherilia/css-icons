@@ -12,7 +12,7 @@
     box-sizing: border-box;
   }
 
-  /////*** MENU ("BURGER") ***/////
+  /////*** MENU "BURGER" ***/////
 
   &--menu {
     .icon-size(@icon-size, @icon-size * 0.9);
@@ -20,7 +20,7 @@
     background-image: linear-gradient(to top, @icon-color, @icon-color 20%, transparent 20%, transparent 39%, @icon-color 39%, @icon-color 61%, transparent 61%, transparent 80%, @icon-color 80%, @icon-color 100%);
   }
 
-  /////*** CLOSE (CROSS IN CIRCLE) ***/////
+  /////*** CROSS IN CIRCLE ***/////
 
   &--close {
     .circle();
@@ -30,6 +30,29 @@
       .center-hor();
       .icon-size(@icon-size * 0.15, @icon-size * 0.7);
       background-color: @icon-color;
+      top: @icon-size * 0.15;
+      border-radius: @icon-size * 0.16;
+    }
+
+    &::before {
+      transform: rotate(45deg);
+    }
+
+    &::after {
+      transform: rotate(-45deg);
+    }
+  }
+
+  /////*** CROSS IN FILLED CIRCLE ***/////
+
+  &--close-fill {
+    .circle-fill();
+
+    &::before,
+    &::after {
+      .center-hor();
+      .icon-size(@icon-size * 0.15, @icon-size * 0.7);
+      background-color: @icon-bg-color;
       top: @icon-size * 0.15;
       border-radius: @icon-size * 0.16;
     }
@@ -67,7 +90,7 @@
     }
   }
 
-  /////*** INFO ("I" IN CIRCLE) ***/////
+  /////*** "I" IN CIRCLE ***/////
 
   &--info {
     .circle();
@@ -92,7 +115,32 @@
     }
   }
 
-  /////*** ALARM ("!" IN CIRCLE) ***/////
+  /////*** "I" IN FILLED CIRCLE ***/////
+
+  &--info-fill {
+    .circle-fill();
+
+    &::before,
+    &::after {
+      .center-hor();
+      width: @icon-size * 0.2;
+      background-color: @icon-bg-color;
+    }
+
+    &::before {
+      height: @icon-size * 0.2;
+      border-radius: @icon-size * 0.1;
+      top: @icon-size * 0.15;
+    }
+
+    &::after {
+      height: @icon-size * 0.45;
+      border-radius: @icon-size * 0.16;
+      top: @icon-size * 0.4;
+    }
+  }
+
+  /////*** "!" IN CIRCLE ***/////
 
   &--alarm {
     .circle();
@@ -117,7 +165,32 @@
     }
   }
 
-  /////*** UP (ARROW IN CIRCLE) ***/////
+  /////*** "!" IN FILLED CIRCLE ***/////
+
+  &--alarm-fill {
+    .circle-fill();
+
+    &::before,
+    &::after {
+      .center-hor();
+      width: @icon-size * 0.2;
+      background-color: @icon-bg-color;
+    }
+
+    &::before {
+      height: @icon-size * 0.2;
+      border-radius: @icon-size * 0.1;
+      top: @icon-size * 0.65;
+    }
+
+    &::after {
+      height: @icon-size * 0.45;
+      border-radius: @icon-size * 0.16;
+      top: @icon-size * 0.15;
+    }
+  }
+
+  /////*** UP ARROW IN CIRCLE ***/////
 
   &--up {
     .circle();
@@ -138,7 +211,28 @@
     }
   }
 
-  /////*** DOWN (ARROW IN CIRCLE) ***/////
+  /////*** UP ARROW IN FILLED CIRCLE ***/////
+
+  &--up-fill {
+    .circle-fill();
+
+    &::before {
+      .center-hor();
+      .icon-size(@icon-size * 0.5, @icon-size * 0.5);
+      bottom: @icon-size * 0.6;
+      border: @icon-size * 0.25 solid transparent;
+      border-bottom: @icon-size * 0.25 solid @icon-bg-color;
+    }
+
+    &::after {
+      .icon-size(@icon-size * 0.18, @icon-size * 0.45);
+      .center-hor();
+      background-color: @icon-bg-color;
+      top: @icon-size * 0.4;
+    }
+  }
+
+  /////*** DOWN ARROW IN CIRCLE ***/////
 
   &--down {
     .circle();
@@ -159,7 +253,28 @@
     }
   }
 
-  /////*** PREV (LEFT TRIANGLE IN CIRCLE) ***/////
+  /////*** DOWN ARROW IN FILLED CIRCLE ***/////
+
+  &--down-fill {
+    .circle-fill();
+
+    &::before {
+      .center-hor();
+      .icon-size(@icon-size * 0.5, @icon-size * 0.5);
+      top: @icon-size * 0.6;
+      border: @icon-size * 0.25 solid transparent;
+      border-top: @icon-size * 0.25 solid @icon-bg-color;
+    }
+
+    &::after {
+      .icon-size(@icon-size * 0.18, @icon-size * 0.45);
+      .center-hor();
+      background-color: @icon-bg-color;
+      bottom: @icon-size * 0.4;
+    }
+  }
+
+  /////*** LEFT TRIANGLE IN CIRCLE ***/////
 
   &--prev {
     .circle();
@@ -173,7 +288,21 @@
     }
   }
 
-  /////*** NEXT (RIGHT TRIANGLE IN CIRCLE) ***/////
+  /////*** LEFT TRIANGLE IN FILLED CIRCLE ***/////
+
+  &--prev-fill {
+    .circle-fill();
+
+    &::before {
+      .center-vert();
+      .icon-size(@icon-size * 0.5, @icon-size * 0.5);
+      right: @icon-size * 0.45;
+      border: @icon-size * 0.25 solid transparent;
+      border-right: @icon-size * 0.25 solid @icon-bg-color;
+    }
+  }
+
+  /////*** RIGHT TRIANGLE IN CIRCLE ***/////
 
   &--next {
     .circle();
@@ -184,6 +313,20 @@
       left: @icon-size * 0.45;
       border: @icon-size * 0.25 solid transparent;
       border-left: @icon-size * 0.25 solid @icon-color;
+    }
+  }
+
+  /////*** RIGHT TRIANGLE IN FILLED CIRCLE ***/////
+
+  &--next-fill {
+    .circle-fill();
+
+    &::before {
+      .center-vert();
+      .icon-size(@icon-size * 0.5, @icon-size * 0.5);
+      left: @icon-size * 0.45;
+      border: @icon-size * 0.25 solid transparent;
+      border-left: @icon-size * 0.25 solid @icon-bg-color;
     }
   }
 
@@ -279,7 +422,7 @@
     }
   }
 
-  /////*** ORTHODOXY (ORTHODOX CHRISTIAN CROSS) ***/////
+  /////*** ORTHODOX CHRISTIAN CROSS ***/////
 
   &--orthodoxy {
     .icon-size(@icon-size * 0.16, @icon-size);
@@ -300,6 +443,83 @@
     }
   }
 
+  /////*** PLUS IN CIRCLE ***/////
+
+  &--plus {
+    .circle();
+
+    &::before,
+    &::after {
+      .center-both();
+      .icon-size(@icon-size * 0.15, @icon-size * 0.6);
+      background-color: @icon-color;
+      border-radius: @icon-size * 0.1;
+    }
+
+    &::after {
+      transform: rotate(90deg);
+    }
+  }
+
+  /////*** PLUS IN FILLED CIRCLE ***/////
+
+  &--plus-fill {
+    .circle-fill();
+
+    &::before,
+    &::after {
+      .center-both();
+      .icon-size(@icon-size * 0.15, @icon-size * 0.6);
+      background-color: @icon-bg-color;
+      border-radius: @icon-size * 0.1;
+    }
+
+    &::after {
+      transform: rotate(90deg);
+    }
+  }
+
+  /////*** MINUS IN CIRCLE ***/////
+
+  &--minus {
+    .circle();
+
+    &::before {
+      .center-both();
+      .icon-size(@icon-size * 0.55, @icon-size * 0.15);
+      background-color: @icon-color;
+      border-radius: @icon-size * 0.1;
+    }
+  }
+
+  /////*** MINUS IN FILLED CIRCLE ***/////
+
+  &--minus-fill {
+    .circle-fill();
+
+    &::before {
+      .center-both();
+      .icon-size(@icon-size * 0.55, @icon-size * 0.15);
+      background-color: @icon-bg-color;
+      border-radius: @icon-size * 0.1;
+    }
+  }
+
+  /////*** POWER BUTTON ***/////
+
+  &--power {
+    .circle(@icon-size * 0.8);
+    .offset(@icon-size * 0.07);
+
+    &::before {
+      .icon-size(@icon-size * 0.12, @icon-size * 0.4);
+      .center-hor();
+      .offset(-@icon-size * 0.07, 0);
+      background-color: @icon-color;
+      box-shadow: 0 0 0 @icon-size * 0.05 @icon-bg-color;
+      border-radius: @icon-size * 0.1;
+    }
+  }
 
   /////***  ***/////
 
