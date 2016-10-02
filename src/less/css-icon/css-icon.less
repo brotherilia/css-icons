@@ -544,6 +544,25 @@
     }
   }
 
+  /////*** CONTENTS ***/////
+
+  &--contents {
+
+    &::before {
+      .circle-fill(@icon-size * 0.2);
+      .offset(@icon-size * 0.1, 0);
+      box-shadow: 0 @icon-size * 0.3 0 0 @icon-color, 0 @icon-size * 0.6 0 0 @icon-color;
+    }
+
+    &::after {
+      .icon-size(@icon-size * 0.7, @icon-size * 0.2);
+      .offset(@icon-size * 0.1, @icon-size * 0.3);
+      border-radius: @icon-size * 0.1;
+      background-color: @icon-color;
+      box-shadow: 0 @icon-size * 0.3 0 0 @icon-color, 0 @icon-size * 0.6 0 0 @icon-color;
+    }
+  }
+
   /////***  ***/////
 
 /*
