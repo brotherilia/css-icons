@@ -1152,6 +1152,28 @@ th {
   border-radius: 50%;
   box-shadow: 0 24px 0 -3.84px #ffffff, 0 -24px 0 -3.84px #ffffff, 24px 0 0 -3.84px #ffffff, -24px 0 0 -3.84px #ffffff, 16.8px 16.8px 0 -3.84px #ffffff, -16.8px 16.8px 0 -3.84px #ffffff, 16.8px -16.8px 0 -3.84px #ffffff, -16.8px -16.8px 0 -3.84px #ffffff;
 }
+.css-icon--contents::before {
+  top: 4.8px;
+  left: 0;
+
+  width: 9.6px;
+  height: 9.6px;
+
+  background-color: #000000;
+  border-radius: 50%;
+  box-shadow: 0 14.4px 0 0 #000000, 0 28.8px 0 0 #000000;
+}
+.css-icon--contents::after {
+  top: 4.8px;
+  left: 14.4px;
+
+  width: 33.6px;
+  height: 9.6px;
+
+  background-color: #000000;
+  border-radius: 4.8px;
+  box-shadow: 0 14.4px 0 0 #000000, 0 28.8px 0 0 #000000;
+}
 html,
 body {
   box-sizing: border-box;
