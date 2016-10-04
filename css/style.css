@@ -1007,15 +1007,15 @@ th {
           transform: translate(-50%, 0);
 }
 .css-icon--orthodoxy::after {
-  top: 31.2px;
-  left: -6.96px;
+  top: 29.76px;
+  left: -4.56px;
 
-  width: 21.6px;
-  height: 5.76px;
+  width: 16.8px;
+  height: 7.2px;
 
   background-color: #000000;
-  -webkit-transform: rotate(30deg);
-          transform: rotate(30deg);
+  -webkit-transform: skewy(30deg);
+          transform: skewy(30deg);
 }
 .css-icon--plus {
   width: 48px;
