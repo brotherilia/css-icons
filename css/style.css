@@ -557,6 +557,79 @@ th {
 
   background-color: #000000;
 }
+.css-icon--home-church {
+  top: -19.2px;
+  left: 0;
+
+  width: 32px;
+  height: 32px;
+
+  border: 16px solid transparent;
+  border-bottom: 16px solid #000000;
+}
+.css-icon--home-church::before {
+  top: 16px;
+  left: 50%;
+
+  width: 25.6px;
+  height: 9.6px;
+
+  border: 11.2px solid #000000;
+  border-top: 5.76px solid #000000;
+  border-top: none;
+  border-bottom: none;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+}
+.css-icon--home-church::after {
+  top: -5.44px;
+  right: 0;
+  left: 0;
+  left: -3.2px;
+
+  width: 6.4px;
+  height: 6.4px;
+  margin: 0 auto;
+
+  background: -webkit-linear-gradient(left, transparent, transparent 40%, #000000 40%, #000000 60%, transparent 60%, transparent 100%), -webkit-linear-gradient(top, transparent, transparent 40%, #000000 40%, #000000 60%, transparent 60%, transparent 100%);
+  background:         linear-gradient(to right, transparent, transparent 40%, #000000 40%, #000000 60%, transparent 60%, transparent 100%), linear-gradient(to bottom, transparent, transparent 40%, #000000 40%, #000000 60%, transparent 60%, transparent 100%);
+}
+.css-icon--church1 {
+  top: 11.2px;
+  left: 0;
+
+  width: 25.6px;
+  height: 19.2px;
+
+  border: 11.2px solid #000000;
+  border-bottom: none;
+  border-top-left-radius: 6.4px;
+  border-top-right-radius: 6.4px;
+}
+.css-icon--church1::before {
+  top: -16px;
+  left: -4.8px;
+
+  width: 12.8px;
+  height: 9.6px;
+
+  background-color: #000000;
+  border-top-left-radius: 6.4px;
+  border-top-right-radius: 6.4px;
+}
+.css-icon--church1::after {
+  top: -22.4px;
+  right: 0;
+  left: 0;
+  left: -1.76px;
+
+  width: 6.4px;
+  height: 6.4px;
+  margin: 0 auto;
+
+  background: -webkit-linear-gradient(left, transparent, transparent 35%, #000000 35%, #000000 65%, transparent 65%, transparent 100%), -webkit-linear-gradient(top, transparent, transparent 40%, #000000 40%, #000000 60%, transparent 60%, transparent 100%);
+  background:         linear-gradient(to right, transparent, transparent 35%, #000000 35%, #000000 65%, transparent 65%, transparent 100%), linear-gradient(to bottom, transparent, transparent 40%, #000000 40%, #000000 60%, transparent 60%, transparent 100%);
+}
 .css-icon--info {
   width: 32px;
   height: 32px;
@@ -1310,6 +1383,7 @@ h1 {
   background: none;
   border: none;
   outline: none;
+  outline: 1px solid red;
   box-shadow: none;
 }
 .icon-list__link:hover {
