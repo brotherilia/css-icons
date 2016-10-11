@@ -541,18 +541,9 @@
 
   &--plus-fill {
     .circle-fill();
-
-    &::before,
-    &::after {
-      .center-both();
-      .icon-size(@icon-size * 0.15, @icon-size * 0.6);
-      background-color: @icon-bg-color;
-      border-radius: @icon-size * 0.1;
-    }
-
-    &::after {
-      transform: rotate(90deg);
-    }
+    background-image: linear-gradient(to bottom, @icon-color, @icon-color 20%, transparent 20%, transparent 80%, @icon-color 80%),
+                      linear-gradient(to right, @icon-color, @icon-color 20%, transparent 20%, transparent 45%, @icon-bg-color 45%, @icon-bg-color 55%, transparent 55%, transparent 80%, @icon-color 80%),
+                      linear-gradient(to bottom, @icon-color, @icon-color 45%, @icon-bg-color 45%, @icon-bg-color 55%, @icon-color 55%);
   }
 
   /////*** MINUS IN CIRCLE ***/////
@@ -572,13 +563,8 @@
 
   &--minus-fill {
     .circle-fill();
-
-    &::before {
-      .center-both();
-      .icon-size(@icon-size * 0.55, @icon-size * 0.15);
-      background-color: @icon-bg-color;
-      border-radius: @icon-size * 0.1;
-    }
+    background-image: linear-gradient(to right, @icon-color, @icon-color 20%, transparent 20%, transparent 80%, @icon-color 80%),
+                      linear-gradient(to bottom, @icon-color, @icon-color 45%, @icon-bg-color 45%, @icon-bg-color 55%, @icon-color 55%);
   }
 
   /////*** POWER BUTTON ***/////
@@ -637,6 +623,14 @@
       background-color: @icon-color;
       box-shadow: 0 @icon-size * 0.3 0 0 @icon-color, 0 @icon-size * 0.6 0 0 @icon-color;
     }
+  }
+
+  /////*** RADIO ***/////
+
+  &--radio {
+    .circle();
+    box-shadow: inset 0 0 0 @icon-size * 0.32 @icon-color;
+    //background-color: @icon-color; - unchecked
   }
 
   /////***  ***/////
